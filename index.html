@@ -126,6 +126,11 @@
             margin: 10px 0;
         }
 
+        .photo-frame.landscape {
+            aspect-ratio: 16/9;
+            max-height: 200px; /* Batas tinggi */
+        }
+
         /* Tombol Navigasi */
         .btn-container {
             width: 100%;
@@ -352,7 +357,7 @@
             from { opacity: 0; } to { opacity: 1; }
         }
 
-        /* HALAMAN 6: Layout Kiri Kanan */
+        /* HALAMAN 7: Layout Kiri Kanan */
         .final-layout {
             display: flex;
             align-items: center;
@@ -486,17 +491,31 @@
 
         <!-- HALAMAN 6 -->
         <div class="page" id="page-6">
+            <h2>MAKASIH UDA DATENG DI HIDUP AKU 💖</h2>
+            <img src="image4.png" class="photo-frame landscape" alt="Foto Pacar 4 Landscape">
+            <p style="font-size: 13px; text-align: justify; overflow-y: auto; max-height: 300px; margin-top: 10px; padding-right: 5px;">
+                semenjak aku kenal sama kamu, hidup aku jadi lebih berwarna padahal sebelum nya hidup aku cuman hitam putih, cuman kekosongan isinya, tapii pas kamuu dateng kehidup akuuu, kamu kaya ngisi kekosongan di hidup aku, aku jadi lebih bisa buat senyum, bisa jadi orang yang peduli sama orang lain, jadi orang yang perasa, dan jadi orang yang pengen mencapai semua impian dan keinginan nya, akuu bener bener beruntung punya kamu, kamu yang selalu sabar, selalu nenangin aku pas aku lagi engga baik baik aja, selalu ngeyakinin aku bahwa aku itu pasti bisa, kamu alasan aku senyum tiap hari, alasan aku bahagia tiap hari, bahkan kalo dunia punya miliaran cara buat misahin kita berdua aku pasti punya triliunan cara buat kita sama sama lagi, makasii udaa bertahan sejauh ini, dan selamat ulang taun yang ke 18 sayang.
+            </p>
+            <div class="btn-container">
+                <button class="btn btn-prev" onclick="prevPage(5)">Kembali</button>
+                <button class="btn btn-next" onclick="nextPage(7)">Lanjut ▶</button>
+            </div>
+        </div>
+
+        <!-- HALAMAN 7 (Sebelumnya Halaman 6) -->
+        <div class="page" id="page-7">
             <h2>HALAMAN TERAKHIR FOR YOU 👑</h2>
             
             <div class="final-layout">
                 <img src="image3.png" class="photo-frame" alt="Foto Pacar 3">
                 <p class="final-text">
-                    <strong>HAPPY BIRTHDAY SAYANGKUU</strong>, bertambah deh umurnya jadi 18 taun, makin tua nyaaaak, semogaa kamuu makin bahagiaa, semogaa kamu lebih banyak senyum nya daripada sedihnya, semoga impian dan keinginan kamu pelan pelan tercapai, semogaaa kedepan nyaa dipermudahkan jalan nya, dan semogaa makin baik, makin penyayang, makin sabaar sama kelakuan aku yang nyeleneh, dan yang paling penting harus tetep sayang terus sama akuuu😡😡🫰
+                    <strong>HAPPY BIRTHDAY SAYANGKUU</strong>, bertambah deh umurnya jadi 18 taun, makin tua nyaaaak, semogaa kamuu makin bahagiaa, semogaa kamu lebih banyak senyum nya daripada sedihnya, semoga impian dan keinginan kamu pelan pelan tercapai, semogaaa kedepan nyaa dipermudahkan jalan nya, dan semogaa makin baik, makin penyayang, makin sabaar sama kelakuan aku yang nyeleneh, dan yang paling penting harus tetep sayang terus sama akuuu😡😡🫰<br><br>
+                    <strong>tuhan aja sayang, apalagi nuel.</strong>
                 </p>
             </div>
 
             <div class="btn-container">
-                <button class="btn btn-prev" onclick="prevPage(5)">Kembali</button>
+                <button class="btn btn-prev" onclick="prevPage(6)">Kembali</button>
             </div>
         </div>
 
@@ -534,29 +553,4 @@
         function nextPage(targetPage) {
             startMusic();
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById('page-' + targetPage).classList.add('active');
-        }
-
-        function pencetKue() {
-            if (clickCount < 3) {
-                clickCount++;
-                const cake = document.getElementById('cake-obj');
-                
-                cake.classList.add('shake');
-                setTimeout(() => {
-                    cake.classList.remove('shake');
-                }, 300);
-
-                if (clickCount === 3) {
-                    document.getElementById('cake-flame').style.opacity = '0';
-                    document.getElementById('hint-text').innerText = 'LILIN PADAM! 🎉';
-                    document.getElementById('hint-text').style.background = '#6b7280';
-                    
-                    document.getElementById('box-ucapan').style.display = 'block';
-                    document.getElementById('btn-to-6').style.display = 'block';
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+            document.getEl
